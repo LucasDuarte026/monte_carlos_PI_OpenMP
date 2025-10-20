@@ -9,10 +9,23 @@ Uso: ./montecarloLivro (o número de pontos será pedido no console)
 */
 #include <stdio.h>
 #include <stdlib.h> // Para drand48_r, drand48_data, srand48_r, geração reentrantede números aleatórios entre 0 e 1 em ponto flutuante
-#include <omp.h>  // Para omp_get_wtime()
-#include <time.h> // Para time()
-    int main()
-{
+#include <omp.h>    // Para omp_get_wtime()
+#include <time.h>   // Para time()
+
+int main(int argc, char *argv[]){
+
+    if (argc < 2)
+    {
+        printf("error: insert the N\n");
+        printf(" - Examples\n $ ./bin/sequencial_reference 1000\n");
+        return -1;
+    }
+    if (!atoi(argv[1]))
+    {
+        printf("error: insert the N numerical\n");
+        printf(" - Examples\n $ ./bin/sequencial_reference 1000\n");
+        return -1;
+    }
     int count;   // Pontos dentro do círculo
     long int n;  // Número total de pontos
     long int i;  // Contador
@@ -23,8 +36,7 @@ Uso: ./montecarloLivro (o número de pontos será pedido no console)
     // Estrutura para o estado do gerador reentrante
     struct drand48_data randBuffer;
     // Semente inicial para o gerador reentrante.
-    printf("\nn = "); // Pergunta a quantidade de pontos
-    scanf("%ld", &n); // Lê a quantidade de pontos do console
+    n = atoi(argv[1]); // Lê a quantidade de pontos do console
     // inicializa o contador
     count = 0;
     // Inicializa o estado do gerador reentrante com a semente.

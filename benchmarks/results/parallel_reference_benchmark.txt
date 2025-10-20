@@ -1,0 +1,48 @@
+*****************************************************
+test: N=10
+
+Estimativa de PI = 2.800000000
+Tempo de execução: 0.006993 segundos
+result: ok
+
+
+*****************************************************
+test: N=100
+
+Estimativa de PI = 3.120000000
+Tempo de execução: 0.013343 segundos
+result: ok
+
+
+*****************************************************
+test: N=1000
+
+Estimativa de PI = 3.144000000
+Tempo de execução: 0.029872 segundos
+result: ok
+
+
+*****************************************************
+test: N=10000
+
+Estimativa de PI = 3.140400000
+Tempo de execução: 0.013909 segundos
+result: ok
+
+
+*****************************************************
+test: N=100000
+
+Estimativa de PI = 3.135240000
+Tempo de execução: 0.017531 segundos
+result: ok
+
+
+*****************************************************
+test: N=1000000
+
+Estimativa de PI = 3.143964000
+Tempo de execução: 0.030696 segundos
+result: ok
+
+

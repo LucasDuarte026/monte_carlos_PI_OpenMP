@@ -7,13 +7,23 @@ Compilar: gcc montecarloParallel.c -o montecarloParallel
 #include <omp.h>
 #include <time.h>
 #define T 8 // Define o nr de threads a usar
-int main()
-{
-    long int n;
+int main(int argc, char *argv[]){
+
+    if (argc < 2)
+    {
+        printf("error: insert the N\n");
+        printf(" - Examples\n $ ./bin/sequencial_reference 1000\n");
+        return -1;
+    }
+    if (!atoi(argv[1]))
+    {
+        printf("error: insert the N numerical\n");
+        printf(" - Examples\n $ ./bin/sequencial_reference 1000\n");
+        return -1;
+    }
+    long int n =atoi(argv[1]);
     long int count = 0;
     double start, end, wall_clock_time;
-    printf("\nn = ");
-    scanf("%ld", &n);
     // Define o número de threads a serem usadas
     omp_set_num_threads(T);
     // Inicia a medição de tempo

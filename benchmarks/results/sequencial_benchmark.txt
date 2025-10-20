@@ -1,0 +1,80 @@
+*****************************************************
+test: N=10
+
+Estimativa de PI: 3.200000000
+Tempo de execução (Wall Clock Time): 0.000003 segundos
+result: ok
+
+
+*****************************************************
+test: N=100
+
+Estimativa de PI: 2.880000000
+Tempo de execução (Wall Clock Time): 0.000007 segundos
+result: ok
+
+
+*****************************************************
+test: N=1000
+
+Estimativa de PI: 3.024000000
+Tempo de execução (Wall Clock Time): 0.000040 segundos
+result: ok
+
+
+*****************************************************
+test: N=10000
+
+Estimativa de PI: 3.118400000
+Tempo de execução (Wall Clock Time): 0.000365 segundos
+result: ok
+
+
+*****************************************************
+test: N=100000
+
+Estimativa de PI: 3.143560000
+Tempo de execução (Wall Clock Time): 0.003544 segundos
+result: ok
+
+
+*****************************************************
+test: N=1000000
+
+Estimativa de PI: 3.142832000
+Tempo de execução (Wall Clock Time): 0.039403 segundos
+result: ok
+
+
+*****************************************************
+test: N=10000000
+
+Estimativa de PI: 3.141252000
+Tempo de execução (Wall Clock Time): 0.332886 segundos
+result: ok
+
+
+*****************************************************
+test: N=100000000
+
+Estimativa de PI: 3.141707680
+Tempo de execução (Wall Clock Time): 3.232751 segundos
+result: ok
+
+
+*****************************************************
+test: N=1000000000
+
+Estimativa de PI: 3.141599044
+Tempo de execução (Wall Clock Time): 33.820417 segundos
+result: ok
+
+
+*****************************************************
+test: N=10000000000
+
+Estimativa de PI: 3.141542288
+Tempo de execução (Wall Clock Time): 49.063493 segundos
+result: ok
+
+
