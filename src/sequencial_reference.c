@@ -20,7 +20,7 @@ int main(int argc, char *argv[]){
         printf(" - Examples\n $ ./bin/sequencial_reference 1000\n");
         return -1;
     }
-    if (!atoi(argv[1]))
+    if (!atol(argv[1]))
     {
         printf("error: insert the N numerical\n");
         printf(" - Examples\n $ ./bin/sequencial_reference 1000\n");
@@ -36,7 +36,7 @@ int main(int argc, char *argv[]){
     // Estrutura para o estado do gerador reentrante
     struct drand48_data randBuffer;
     // Semente inicial para o gerador reentrante.
-    n = atoi(argv[1]); // Lê a quantidade de pontos do console
+    n = atol(argv[1]); // Lê a quantidade de pontos do console
     // inicializa o contador
     count = 0;
     // Inicializa o estado do gerador reentrante com a semente.
@@ -57,7 +57,7 @@ int main(int argc, char *argv[]){
     end_time = omp_get_wtime();
     wall_clock_time = end_time - start_time;
     pi = (double)count / n * 4;
-    printf("\nEstimativa de PI: %.9f\n", pi);
+    printf("Estimativa de PI: %.9f\n", pi);
     printf("Tempo de execução (Wall Clock Time): %f segundos\n", wall_clock_time);
     return 0;
 }

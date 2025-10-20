@@ -6,13 +6,13 @@
 set -uo pipefail
 
 # Define the program type to be compiled and executed
-type="sequencial_reference"
+type="schedule_guided"
 
 # Compile the specified program
 make ${type}
 
 # Maximum of interations N = 10^max
-max=9
+max=10
 # Set up the directory and file for benchmark results
 results_dir="./benchmarks/results"
 output_file="$results_dir/${type}_benchmark.txt"

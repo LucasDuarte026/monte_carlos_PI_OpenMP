@@ -1,60 +1,60 @@
 *****************************************************
 test: 10^1 : 10
-Estimativa de PI = 4.000000000
-Tempo de execução: 0.067861 segundos
+Estimativa de PI = 2.400000000
+Tempo de execução: 0.007953 segundos
 result: ok
 
 *****************************************************
 test: 10^2 : 100
 Estimativa de PI = 3.120000000
-Tempo de execução: 0.090739 segundos
+Tempo de execução: 0.000423 segundos
 result: ok
 
 *****************************************************
 test: 10^3 : 1000
-Estimativa de PI = 3.120000000
-Tempo de execução: 0.077118 segundos
+Estimativa de PI = 3.200000000
+Tempo de execução: 0.008814 segundos
 result: ok
 
 *****************************************************
 test: 10^4 : 10000
-Estimativa de PI = 3.140800000
-Tempo de execução: 0.080443 segundos
+Estimativa de PI = 3.121600000
+Tempo de execução: 0.001963 segundos
 result: ok
 
 *****************************************************
 test: 10^5 : 100000
-Estimativa de PI = 3.143920000
-Tempo de execução: 0.078923 segundos
+Estimativa de PI = 3.143600000
+Tempo de execução: 0.004043 segundos
 result: ok
 
 *****************************************************
 test: 10^6 : 1000000
-Estimativa de PI = 3.142992000
-Tempo de execução: 0.099764 segundos
+Estimativa de PI = 3.144412000
+Tempo de execução: 0.013036 segundos
 result: ok
 
 *****************************************************
 test: 10^7 : 10000000
-Estimativa de PI = 3.142002000
-Tempo de execução: 0.493368 segundos
+Estimativa de PI = 3.141576400
+Tempo de execução: 0.091605 segundos
 result: ok
 
 *****************************************************
 test: 10^8 : 100000000
-Estimativa de PI = 3.141557000
-Tempo de execução: 5.537204 segundos
+Estimativa de PI = 3.141445640
+Tempo de execução: 0.787814 segundos
 result: ok
 
 *****************************************************
 test: 10^9 : 1000000000
-Estimativa de PI = 3.141470436
-Tempo de execução: 35.941777 segundos
+Estimativa de PI = 3.141532268
+Tempo de execução: 9.554282 segundos
 result: ok
 
 *****************************************************
 test: 10^10 : 10000000000
-Estimativa de PI = 3.141640533
-Tempo de execução: 198.170305 segundos
+Estimativa de PI = 3.141620716
+Tempo de execução: 316.313071 segundos
 result: ok
 
