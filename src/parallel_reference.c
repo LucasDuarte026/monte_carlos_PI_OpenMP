@@ -6,7 +6,7 @@ Compilar: gcc montecarloParallel.c -o montecarloParallel
 #include <stdlib.h>
 #include <omp.h>
 #include <time.h>
-#define T 8 // Define o nr de threads a usar
+
 int main(int argc, char *argv[]){
 
     if (argc < 2)
@@ -24,12 +24,15 @@ int main(int argc, char *argv[]){
     long int n =atol(argv[1]);
     long int count = 0;
     double start, end, wall_clock_time;
-    // Define o número de threads a serem usadas
-    omp_set_num_threads(T);
     // Inicia a medição de tempo
     start = omp_get_wtime();
-// Inicia a região paralela
-#pragma omp parallel
+    
+    // Define o número de threads a serem usadas
+    int local_num_threads = omp_get_num_procs() ;
+    omp_set_num_threads(local_num_threads);
+    unsigned int seed = time(NULL) ;
+    // Inicia a região paralela
+    #pragma omp parallel num_threads(local_num_threads)
     {
         long int local_count = 0;
         // 1. CADA thread terá seu próprio buffer e variável para o resultado.
@@ -38,9 +41,9 @@ int main(int argc, char *argv[]){
         double x, y;
         // 2. CADA thread inicializa (semeia) seu próprio buffer.
         // Usamos o tempo + ID da thread para garantir sementes únicas.
-        srand48_r(time(NULL) + omp_get_thread_num(), &randBuffer);
-// O loop é dividido entre as threads
-#pragma omp for
+        srand48_r(seed + omp_get_thread_num(), &randBuffer);
+        // O loop é dividido entre as threads
+        #pragma omp for
         for (long int i = 0; i < n; ++i)
         {
             // A função armazena o resultado em 'x' e 'y'.
@@ -52,8 +55,8 @@ int main(int argc, char *argv[]){
                 local_count++;
             }
         }
-// Atualiza o contador global de forma atômica para evitar conflitos
-#pragma omp atomic
+        // Atualiza o contador global de forma atômica para evitar conflitos
+        #pragma omp atomic
         count += local_count;
     }
     // Finaliza a medição de tempo
