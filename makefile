@@ -7,8 +7,6 @@ parallel_reference:
 sequencial_reference:
 	gcc ./src/sequencial_reference.c -o ./bin/sequencial_reference -fopenmp
 
-optimized:
-	gcc ./src/optimized.c -o ./bin/optimized -fopenmp
 
 schedule_dynamic:
 	gcc ./src/schedule_dynamic.c -o ./bin/schedule_dynamic -fopenmp
@@ -18,3 +16,9 @@ schedule_guided:
 
 schedule_auto:
 	gcc ./src/schedule_auto.c -o ./bin/schedule_auto -fopenmp
+
+optimized:
+	gcc ./src/optimized.c -o ./bin/optimized -fopenmp
+
+optimized_simd:
+	gcc ./src/optimized_simd.c -o ./bin/optimized_simd -fopenmp

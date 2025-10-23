@@ -1,5 +1,6 @@
 #!/bin/bash
 
+bash ./benchmarks/optimized_simd_bench.sh
 bash ./benchmarks/optimized_bench.sh
 bash ./benchmarks/parallel_reference_bench.sh
 bash ./benchmarks/schedule_auto_bench.sh
