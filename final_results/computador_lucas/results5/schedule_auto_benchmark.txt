@@ -1,0 +1,66 @@
+*****************************************************
+test: 10^1 : 10
+Estimativa de PI = 3.200000000000
+Tempo de execução: 0.000175 segundos
+result: ok
+
+*****************************************************
+test: 10^2 : 100
+Estimativa de PI = 3.080000000000
+Tempo de execução: 0.000145 segundos
+result: ok
+
+*****************************************************
+test: 10^3 : 1000
+Estimativa de PI = 3.160000000000
+Tempo de execução: 0.000157 segundos
+result: ok
+
+*****************************************************
+test: 10^4 : 10000
+Estimativa de PI = 3.177200000000
+Tempo de execução: 0.000172 segundos
+result: ok
+
+*****************************************************
+test: 10^5 : 100000
+Estimativa de PI = 3.150200000000
+Tempo de execução: 0.000327 segundos
+result: ok
+
+*****************************************************
+test: 10^6 : 1000000
+Estimativa de PI = 3.141284000000
+Tempo de execução: 0.002207 segundos
+result: ok
+
+*****************************************************
+test: 10^7 : 10000000
+Estimativa de PI = 3.142497200000
+Tempo de execução: 0.021060 segundos
+result: ok
+
+*****************************************************
+test: 10^8 : 100000000
+Estimativa de PI = 3.141785920000
+Tempo de execução: 0.207895 segundos
+result: ok
+
+*****************************************************
+test: 10^9 : 1000000000
+Estimativa de PI = 3.141560552000
+Tempo de execução: 2.073387 segundos
+result: ok
+
+*****************************************************
+test: 10^10 : 10000000000
+Estimativa de PI = 3.141614077600
+Tempo de execução: 20.504865 segundos
+result: ok
+
+*****************************************************
+test: 10^11 : 100000000000
+Estimativa de PI = 3.141589272760
+Tempo de execução: 207.101415 segundos
+result: ok
+

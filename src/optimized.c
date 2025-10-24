@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
      * base_seed: ponto de partida comum para gerar seeds individuais por thread.
      * Utilizamos time(NULL) para garantir valores diferentes em execuções sucessivas.
      */
-    const long int base_seed = (long int)time(NULL);
+    long int base_seed = (long int)time(NULL);
 
     /*
      * Região paralela:
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
      *   ajudando a evitar condições de corrida por esquecimento.
      * - reduction soma os acertos de forma paralela, eliminando a necessidade de "atomic".
      */
-    #pragma omp parallel default(none)  reduction(+ : hits) shared(samples)
+    #pragma omp parallel default(none)  reduction(+ : hits) shared(samples, base_seed)
     {
         const int tid = omp_get_thread_num();
         struct drand48_data rand_buffer;

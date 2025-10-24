@@ -1,7 +1,7 @@
-#include <omp.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <omp.h>    // Funções de paralelismo e medição de tempo
+#include <stdio.h>  // E/S padrão (printf)
+#include <stdlib.h> // atol
+#include <time.h>   // time() para gerar a base_seed
 #include <stdint.h> // Necessário para uint64_t
 
  
@@ -65,8 +65,8 @@ int main(int argc, char *argv[])
      * Usa-se duas sementes diferentes (derivadas da semente base)
      * para garantir que os fluxos de 'x' e 'y' sejam independentes, melhorando a aleatoriedade por diminuir correlação.
      */
-    const uint64_t seed_x = hash64((uint64_t)base_seed, 0xDEADBEEFCAFEF00DULL);
-    const uint64_t seed_y = hash64((uint64_t)base_seed, 0x123456789ABCDEF0ULL);
+    uint64_t seed_x = hash64((uint64_t)base_seed, 0xDEADBEEFCAFEF00DULL);
+    uint64_t seed_y = hash64((uint64_t)base_seed, 0x123456789ABCDEF0ULL);
 
     /*
      * Região paralela:
@@ -84,8 +84,9 @@ int main(int argc, char *argv[])
          * - "for": Divide o trabalho de 'samples' entre as threads (Ex: 4 threads).
          * - "simd": Instrui CADA thread a usar instruções vetoriais  AVX/SSE - Ambas disponíveis no Cluster da USP (plataforma onde será rodado o código).
          * - "schedule(static)": Mantido pela eficiência pela natureza homogênea de carga de trabalho da aplicação.
+         * -  Usaria-se simdLen(4) mas o cluster não aceita essa declaração, portanto, usa-se na flag de compilação
          */
-        #pragma omp for simd schedule(static)
+        #pragma omp for simd schedule(static)  // simdlen(4)
         for (unsigned long long i = 0; i < samples; ++i)
         {
             /*

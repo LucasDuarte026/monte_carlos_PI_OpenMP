@@ -6,15 +6,20 @@
 set -uo pipefail
 
 # Define the program type to be compiled and executed
-type="optimized_simd"
+type="optimized"
 
 # Compile the specified program
 make ${type}
 
 # Maximum of interations N = 10^max
-max=10
-# Set up the directory and file for benchmark results
-results_dir="./benchmarks/results"
+max=11
+if [ -z "$1" ]; then
+        echo "Please provide a directory suffix (e.g., exec.sh 1)"
+        exit 1
+fi
+
+# Create the results directory path based on the argument
+results_dir="./benchmarks/results$1"
 output_file="$results_dir/${type}_benchmark.txt"
 
 # Create the results directory if it doesn't exist and clear the output file
