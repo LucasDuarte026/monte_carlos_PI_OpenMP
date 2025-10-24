@@ -1,0 +1,60 @@
+*****************************************************
+test: 10^1 : 10
+Estimativa de PI: 2.800000000
+Tempo de execução (Wall Clock Time): 0.000002 segundos
+result: ok
+
+*****************************************************
+test: 10^2 : 100
+Estimativa de PI: 3.280000000
+Tempo de execução (Wall Clock Time): 0.000003 segundos
+result: ok
+
+*****************************************************
+test: 10^3 : 1000
+Estimativa de PI: 3.212000000
+Tempo de execução (Wall Clock Time): 0.000014 segundos
+result: ok
+
+*****************************************************
+test: 10^4 : 10000
+Estimativa de PI: 3.182000000
+Tempo de execução (Wall Clock Time): 0.000128 segundos
+result: ok
+
+*****************************************************
+test: 10^5 : 100000
+Estimativa de PI: 3.149880000
+Tempo de execução (Wall Clock Time): 0.001318 segundos
+result: ok
+
+*****************************************************
+test: 10^6 : 1000000
+Estimativa de PI: 3.141264000
+Tempo de execução (Wall Clock Time): 0.012888 segundos
+result: ok
+
+*****************************************************
+test: 10^7 : 10000000
+Estimativa de PI: 3.141474400
+Tempo de execução (Wall Clock Time): 0.128055 segundos
+result: ok
+
+*****************************************************
+test: 10^8 : 100000000
+Estimativa de PI: 3.141720280
+Tempo de execução (Wall Clock Time): 1.275901 segundos
+result: ok
+
+*****************************************************
+test: 10^9 : 1000000000
+Estimativa de PI: 3.141620184
+Tempo de execução (Wall Clock Time): 12.756570 segundos
+result: ok
+
+*****************************************************
+test: 10^10 : 10000000000
+Estimativa de PI: -0.294390972
+Tempo de execução (Wall Clock Time): 127.558745 segundos
+result: ok
+
