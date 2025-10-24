@@ -1,3 +1,5 @@
-cluster/
+
 testes_antigos/
 .vscode/
+*.zip
+final_results/*.zip
